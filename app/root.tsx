@@ -16,7 +16,7 @@ export default function App() {
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
-        <title>Remix: So great, it's funny!</title>
+        <title>Hacker News by Remix</title>
         <Links />
       </head>
       <body className="drac-bg-black container mx-auto">

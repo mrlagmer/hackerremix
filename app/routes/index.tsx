@@ -20,6 +20,7 @@ export default function IndexRoute() {
           <li
             variant="subtle"
             className="drac-list drac-box drac-card drac-card-subtle drac-border-pink drac-bg-pink drac-p-md drac-m-md"
+            key={news.id}
           >
             <a
               href={`/item/${news.id}`}

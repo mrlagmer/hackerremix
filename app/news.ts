@@ -47,9 +47,12 @@ export async function getComments(ids) {
 
 //export function to get all comments for a hacker news post including the child comments
 export async function getAllComments(id) {
+  let allComments = [];
   const story = await getNews(id);
-  const comments = await getComments(story.kids);
-  const allComments = await getAllCommentsRecursive(comments);
+  if (story.kids) {
+    const comments = await getComments(story.kids);
+    allComments = await getAllCommentsRecursive(comments);
+  }
   return { story, allComments };
 }
 
